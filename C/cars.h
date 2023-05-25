@@ -23,5 +23,6 @@ void removeVehicle(Vehicle vehicleList[], int* numVehicles);
 void displayStatistics(Vehicle vehicleList[], int numVehicles);
 void displayVehicles(Vehicle vehicleList[], int numVehicles);
 void searchVehicleByPlate(Vehicle vehicleList[], int numVehicles);
+void searchVehicleByType(Vehicle vehicleList[], int numVehicles);
 
 #endif  /* CARS_H */
