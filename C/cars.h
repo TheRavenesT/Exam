@@ -3,6 +3,7 @@
 
 #define MAX_BRAND_LENGTH 50
 #define MAX_MODEL_LENGTH 50
+#define MAX_TYPE_LENGTH 50
 #define MAX_YEAR_LENGTH 10
 #define MAX_COLOR_LENGTH 20
 #define MAX_PLATE_LENGTH 20
@@ -14,6 +15,7 @@ typedef struct {
     char year[MAX_YEAR_LENGTH];
     char color[MAX_COLOR_LENGTH];
     char plate[MAX_PLATE_LENGTH];
+    char type [MAX_TYPE_LENGTH];
 } Vehicle;
 
 void addVehicle(Vehicle vehicleList[], int* numVehicles);

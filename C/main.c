@@ -30,13 +30,13 @@ int main() {
                 removeVehicle(vehicleList, pointeurVehicle);
                 break;
             case 3:
-                displayStatistics(vehicleList, pointeurVehicle);
+                displayStatistics(vehicleList, numVehicles);
                 break;
             case 4:
-                displayVehicles(vehicleList, pointeurVehicle);
+                displayVehicles(vehicleList, numVehicles);
                 break;
             case 5:
-                searchVehicleByPlate(vehicleList, pointeurVehicles);
+                searchVehicleByPlate(vehicleList, numVehicles);
                 break;
             case 6:
                 printf("Au revoir.\n");

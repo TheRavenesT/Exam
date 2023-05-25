@@ -10,6 +10,9 @@ void addVehicle(Vehicle vehicleList[], int* numVehicles) {
 
     Vehicle newVehicle;
     
+    printf("Type de Véhicule : ");
+    scanf("%49s", newVehicle.type);
+
     printf("Marque : ");
     scanf("%49s", newVehicle.brand);
 
@@ -71,7 +74,7 @@ void displayStatistics(Vehicle vehicleList[], int numVehicles) {
     // Add more color variables as needed
 
     for (int i = 0; i < numVehicles; i++) {
-        if (strcmp(vehicleList[i].model, "Voiture") == 0) {
+        if (strcmp(vehicleList[i].type, "Voiture") == 0) {
             numCars++;
             if (strcmp(vehicleList[i].color, "Rouge") == 0)
                 numRedCars++;
@@ -79,11 +82,11 @@ void displayStatistics(Vehicle vehicleList[], int numVehicles) {
                 numBlueCars++;
             else if (strcmp(vehicleList[i].color, "Vert") == 0)
                 numGreenCars++;
-        } else if (strcmp(vehicleList[i].model, "Moto") == 0) {
+        } else if (strcmp(vehicleList[i].type, "Moto") == 0) {
             numMotorcycles++;
-        } else if (strcmp(vehicleList[i].model, "Autobus") == 0) {
+        } else if (strcmp(vehicleList[i].type, "Autobus") == 0) {
             numBuses++;
-        } else if (strcmp(vehicleList[i].model, "Métro") == 0) {
+        } else if (strcmp(vehicleList[i].type, "Métro") == 0) {
             numTrains++;
         }
     }
@@ -107,6 +110,7 @@ void displayVehicles(Vehicle vehicleList[], int numVehicles) {
     printf("Liste des véhicules enregistrés :\n");
     for (int i = 0; i < numVehicles; i++) {
         printf("Véhicule %d\n", i + 1);
+        printf("Type : %s\n", vehicleList[i].type);
         printf("Marque : %s\n", vehicleList[i].brand);
         printf("Modèle : %s\n", vehicleList[i].model);
         printf("Année : %s\n", vehicleList[i].year);
@@ -132,6 +136,7 @@ void searchVehicleByPlate(Vehicle vehicleList[], int numVehicles) {
 
     if (foundIndex != -1) {
         printf("Véhicule trouvé :\n");
+        printf("Type : %s\n", vehicleList[foundIndex].type);
         printf("Marque : %s\n", vehicleList[foundIndex].brand);
         printf("Modèle : %s\n", vehicleList[foundIndex].model);
         printf("Année : %s\n", vehicleList[foundIndex].year);
