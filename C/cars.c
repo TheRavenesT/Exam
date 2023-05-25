@@ -174,3 +174,30 @@ void searchVehicleByType(Vehicle vehicleList[], int numVehicles) {
     }
 }
 
+void searchVehicleByColor(Vehicle vehicleList[], int numVehicles) {
+    char searchColor[MAX_COLOR_LENGTH];
+    printf("Entrez la couleur à rechercher : ");
+    scanf("%19s", searchColor);
+
+    int foundIndex = -1;
+
+    for (int i = 0; i < numVehicles; i++) {
+        if (strcmp(vehicleList[i].color, searchColor) == 0) {
+            foundIndex = i;
+            break;
+        }
+    }
+
+    if (foundIndex != -1) {
+        printf("Véhicule trouvé :\n");
+        printf("Type : %s\n", vehicleList[foundIndex].type);
+        printf("Marque : %s\n", vehicleList[foundIndex].brand);
+        printf("Modèle : %s\n", vehicleList[foundIndex].model);
+        printf("Année : %s\n", vehicleList[foundIndex].year);
+        printf("Couleur : %s\n", vehicleList[foundIndex].color);
+        printf("Numéro d'immatriculation : %s\n", vehicleList[foundIndex].plate);
+    } else {
+        printf("Aucun véhicule de cette couleur trouvé.\n");
+    }
+}
+

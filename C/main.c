@@ -18,7 +18,8 @@ int main() {
         printf("4. Afficher la liste des véhicules\n");
         printf("5. Rechercher un véhicule par numéro d'immatriculation\n");
         printf("6. Rechercher un véhicule par type\n");
-        printf("7. Quitter\n");
+        printf("7. Rechercher un véhicule par couleur\n");
+        printf("8. Quitter\n");
         printf("Choix : ");
         scanf("%d", &choice);
         getchar(); // Clear newline character from input buffer
@@ -43,6 +44,9 @@ int main() {
                 searchVehicleByType(vehicleList, numVehicles);
                 break;
             case 7:
+                searchVehicleByColor(vehicleList, numVehicles);
+                break;
+            case 8:
                 printf("Au revoir.\n");
                 break;
             default:
@@ -51,7 +55,7 @@ int main() {
         }
 
         printf("\n");
-    } while (choice != 7);
+    } while (choice != 8);
 
     return 0;
 }
